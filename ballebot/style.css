@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Sarala&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {padding: 0; margin: 0; box-sizing: border-box;}
+
+a {text-decoration: none;}
+
+body {font-family: 'Sarala', sans-serif; background: linear-gradient(90.15deg, #2F2325 0%, #8E5D52 100%);}
+
+.logo a{background: url(images/logo\ 1.png) no-repeat; height: 62px; width: 62px; display: block; text-indent: -3000px;}
+
+header {display: flex; justify-content: space-around; align-items: center; border-bottom: 1px solid rgba(255, 238, 224, 0.4); padding: 15px;}
+
+nav ul {list-style-type: none;}
+
+nav ul li {float: left; margin-right: 70px;}
+
+a:link, a:visited {color: white;}
+
+#titulos {float: left; font-family: 'Righteous', cursive;  position: relative; left: 201px; top: 110px;}
+
+#titulos h1 {font-size: 44px; color: #FFF2E7; margin-bottom: 20px; font-weight: 500;}
+
+#titulos h3 {font-size: 20px; color: #ECD6C4; margin-bottom: 20px; font-weight: 500;}
+
+#titulos button {background-color: #ECD6C4; padding: 15px; border-radius: 9px; cursor: pointer; font-weight: bold; letter-spacing: 1px; font-size: 15px;}
+
+#imagem {float: right; position: relative; right: 251px; top: 24px; }
+
+.conteudo {clear: both; height: 300px; width: 800px; margin: 0 auto; text-align: center;}
+
+.conteudo h3 {color: #FFF2E7; border-top: 1px solid #FFF2E7; display: inline; padding: 30px 0;}
+
+.conteudo p {color: #ECD6C4; padding: 15px;}
+
+#titulos-imagem {height: 300px; margin-bottom: 180px;}
+
+footer {border-top: 1px solid rgba(255, 238, 224, 0.4); margin-top: -30px; padding: 35px;}
+
+#imagem1 {width: 300px; margin: 0 auto;}
