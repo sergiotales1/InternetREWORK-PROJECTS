@@ -104,7 +104,7 @@ footer nav a {display: block; padding-left: 0;}
 
 /* mudo o display para flex da nav para ocupar o espaço completo e utilizo flex-box para espaçar os elementos */
 
-@media screen and (min-width:72rem) {
+@media screen and (min-width:76rem) {
     h1, h2 {font-size: 4rem;}
 
     .container {display: flex; align-items: center; margin: 0 auto; max-width: 72rem;}
