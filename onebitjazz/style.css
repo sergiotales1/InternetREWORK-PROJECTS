@@ -17,9 +17,11 @@ nav a {color: var(--color-black); font-size: 1.25rem; padding: .5rem; text-decor
 header nav a:nth-child(2n-1) {text-align: right;} /* essa equation seleciona somente os números ímpares para aplicar a format, no caso do nosso site, somente os filhos 1 e 3 will be selected e a equation funcionará da seguinte forma, filho 1 (2.1-1) = 1, filho 2 (2.2-1) = 3 (já nesse momento é selecionado todos os elementos que queremos alinhar á direita.
 */
 
-.button {background-color: var(--color-primary); border: 2px solid var(--color-black); box-shadow: 4px 4px 0 var(--color-black); color: var(--color-black); display: block; font-size: 1.25rem; padding: .75rem 1rem; max-width: 14rem; text-align: center; text-decoration: none; text-transform: uppercase;}
+.button {background-color: var(--color-primary); border: 2px solid var(--color-black); box-shadow: 4px 4px 0 var(--color-black); color: var(--color-black); display: block; font-size: 1.25rem; padding: .75rem 1rem; max-width: 14rem; text-align: center; text-decoration: none; text-transform: uppercase; transition-duration: .4s; }
 
 /* background da cor primary border black, box shadow 4px para a esquerda, 4 px para baixo e 0 blur da cor preta, uma cor das letras preta, display block para aumentar a width, padding de 0.75rem cima baixo e 1 rem laterais, max-width de 14rem e text-align center. */
+
+.button:hover {transform: translateX(4px);}
 
 /*------------------------------------ FIM header ------------------------------- */
 
