@@ -1,0 +1,150 @@
+body, ul, li, p {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+   font-size: 1.2rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   background-color: black;
+   padding: 20px;
+}
+
+nav ul {
+   display: flex;
+}
+
+nav ul li {
+   margin-left: 20px;
+}
+
+h1 {
+   text-align: center;
+   margin-top: 50px;
+}
+
+img {
+   max-width: 100%;
+   display: block;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   max-width: 800px;
+   margin: 0 auto;
+   grid-gap: 20px;
+   /* Here we set 3 columns into our layout with each one receiving 33,3% of total space (800px max)  */
+}
+
+.grid div:nth-child(n + 4) {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   align-items: center;
+   /* Here we are dealing with the 4th child and forward to create some gap of the paragraph and the image, and create a layout with 2 columns (image and p) */
+}
+
+.grid div.anuncio {
+   grid-column: 1;
+   grid-row: 2 / 5;
+   display: block;
+   /* setting the anuncio div into the first column with a space of 3 rows (2 to 5) */
+}
+
+ /*  RESPONSIVE MAIN GRID  */
+
+ @media (max-width: 600px) {
+   .grid {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .grid > div:nth-child(n + 4) {
+      display: block;
+   }
+
+   .grid > div.anuncio {
+      grid-column: auto;
+      grid-row: auto;
+      order: -1;
+   }
+ }
+
+
+ /*  CSS SECOND GRID  */
+
+ .grid2 {
+   max-width: 800px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 200px; 
+   /* two columns one with 200px and other with 1fraction of the remaining space */
+   grid-gap: 20px;
+ }
+
+ .sidebar > div {
+   margin-bottom: 10px;
+ }
+
+ /* RESPONSIVE SECOND GRID */
+
+ @media (max-width:600px) {
+   .grid2 {
+      grid-template-columns: 1fr;
+   }
+
+   .sidebar {
+      display: flex;
+      overflow: scroll;
+   }
+
+   .sidebar > div {
+      margin: 0 10px;
+      flex: 1 0 200px;
+   }
+ }
+
+
+/*  GRID 3  */
+
+.grid3 {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 20px;
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 10px;
+}
+
+.grid3 > div:nth-child(1) {
+   grid-row: 1 / 3;
+}
+
+.grid3-item {
+   display: grid;
+}
+
+.grid3-item img {
+   grid-column: 1;
+   grid-row: 1 / 3;
+   align-self: end;
+   height: 100%;
+}
+
+.grid3-item p {
+   background: rgba(0, 0, 0, 0.6);
+   padding: 10px;
+   color: white;
+   grid-column: 1;
+   grid-row: 2;
+   align-self: end;
+}
