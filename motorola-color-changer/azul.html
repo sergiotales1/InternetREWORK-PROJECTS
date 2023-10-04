@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello MOTO</title>
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d28f0790a9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="image">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/azul1.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/azul2.png" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/azul3.png" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="content">
+        <div class="title-stars">
+          <p>
+            <strong
+              ><span class="title">moto g84 5G 256 GB -</span> Azul - Vegan
+              Leather</strong
+            >
+          </p>
+          <div class="reviews">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+            <p>14 reviews</p>
+          </div>
+
+          <div class="promo">
+            <p>
+              Compre o <strong>moto g84</strong> e leve a
+              <strong>capa protetora anti impacto</strong> por 50% OFF. Adicione
+              seu acessório na próxima página.
+            </p>
+          </div>
+
+          <div class="price">
+            <p>
+              <span class="value"
+                >Por <span>R$ 1.799,10</span> à vista via PIX ou 1x no
+                cartão</span
+              >
+              <span class="parcelas"
+                >ou até <strong>12x</strong> de <strong>R$ 166,58</strong> sem
+                juros</span
+              >
+              <span class="prazo">Total a prazo R$ 1.999,00</span>
+              <a href="">Formas de pagamento</a>
+            </p>
+          </div>
+
+          <div class="change-color">
+            <span class="myColor">Cor: </span>
+            <select id="mySelect" onchange="changeColor()">
+              <option value="azul" class="azul">Azul</option>
+              <option value="magenta" class="magenta">Magenta</option>
+              <option value="grafite" class="grafite">Grafite</option>
+            </select>
+            <button class="comprar">Comprar</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
