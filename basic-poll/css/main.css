@@ -9,47 +9,162 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  position: relative;
 }
 
 input {
   text-align: center;
   margin-bottom: 2rem;
+  border: 1px solid lightslategray;
+  width: 20%;
+  line-height: 30px;
+  font-size: 1.1rem;
 }
 
 .container {
-  width: 98%;
-  max-width: 400px;
+  width: 96%;
+  max-width: 600px;
   gap: 3rem 0;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   text-align: center;
+  border-radius: 15px;
 }
 
-/*                          | TITLE |                             */
+/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- | TITLE |   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 .title {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
-/*                          | OPTIONS |                             */
+/*   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- | OPTIONS |     -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 
 .options {
   display: flex;
   flex-direction: column;
+  font-size: 1.3rem;
   gap: 1.7rem;
 }
 
 .user-answer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #option-0-A,
 #option-1-A,
 #option-2-A,
 #option-3-A {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   margin: 0;
+}
+
+#submit-button {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  color: white;
+  background-color: lightblue;
+  padding: 5px;
+}
+
+@media (min-width: 992px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .options {
+    font-size: 1.5rem;
+  }
+
+  #option-0-A,
+  #option-1-A,
+  #option-2-A,
+  #option-3-A {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  input {
+    font-size: 1.7rem;
+    padding: 1%;
+  }
+
+  #submit-button {
+    font-size: 2rem;
+    padding: 2%;
+    border-radius: 13px;
+  }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MODAL -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.modal {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  text-align: center;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  height: 300px;
+  width: 400px;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+.modal h1 {
+  font-size: 2rem;
+  color: rgb(231, 43, 43);
+}
+
+.modal p {
+  font-size: 1.5rem;
+  color: rgb(112, 111, 111);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-button {
+  color: white;
+  background-color: silver;
+  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+  .modal {
+    height: 200px;
+    width: 200px;
+  }
+  .modal h1 {
+    font-size: 1.3rem;
+  }
+  .modal p {
+    font-size: 1.2rem;
+  }
+  .modal-button {
+    font-size: 1.5rem;
+  }
 }

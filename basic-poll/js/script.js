@@ -12,11 +12,9 @@ const pollObject = {
   registerAnswer() {
     if (userInput.value === "") {
       // modal and locking the program
-      this.showModal();
-      return null;
+      return this.showModal();
     }
     let userAnswer = Number(userInput.value);
-    console.log(userAnswer);
     // removing possible options that are not into the poll
     if (
       userAnswer != 0 &&
@@ -34,13 +32,24 @@ const pollObject = {
       // attributing the answer into the interface
       document.querySelector(`#option-${userAnswer}-A`).textContent =
         this.answer[userAnswer];
-      console.log(this.answer);
     }
   },
 
   showModal() {
-    console.log("test");
-    // -=-=-=-=-=-=-=-=-=-=- come back to make the modal! -=-=-=-=-=-=-=-=-=-=-=-=-
+    const modalEl = document.querySelector(".modal");
+    const overlayEl = document.querySelector(".overlay");
+    modalEl.classList.remove("hidden");
+    overlayEl.classList.remove("hidden");
+
+    document
+      .querySelector(".modal-button")
+      .addEventListener("click", hiddenToggler);
+    overlayEl.addEventListener("click", hiddenToggler);
+
+    function hiddenToggler() {
+      modalEl.classList.add("hidden");
+      overlayEl.classList.add("hidden");
+    }
   },
 };
 

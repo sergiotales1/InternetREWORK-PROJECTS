@@ -8,6 +8,12 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
+      <h1>INVALID VALUE!</h1>
+      <p>Please use a number inside the range of options (0 - 3)</p>
+      <button class="modal-button">X</button>
+    </div>
     <div class="container">
       <div class="title">
         <h1 id="title">What's the best programming language?</h1>
@@ -23,8 +29,8 @@
         <label id="option-3-A">0</label>
       </div>
       <div class="user-answer">
-        <input type="text" id="user-input" placeholder="Enter your answer" />
-        <button id="submit-button">COMPUTE</button>
+        <input type="text" id="user-input" placeholder="ENTER" />
+        <button id="submit-button">SUBMIT</button>
       </div>
     </div>
   </body>
