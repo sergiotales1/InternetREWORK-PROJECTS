@@ -4,9 +4,11 @@
 body {
   font-family: cursive;
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 input {
@@ -15,13 +17,12 @@ input {
 }
 
 .container {
-  width: 30rem;
-  padding: 1rem;
-  gap: 4rem 0;
+  width: 98%;
+  max-width: 400px;
+  gap: 3rem 0;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   text-align: center;
 }
 
@@ -43,4 +44,12 @@ input {
 .user-answer {
   display: flex;
   flex-direction: column;
+}
+
+#option-0-A,
+#option-1-A,
+#option-2-A,
+#option-3-A {
+  font-size: 0.7rem;
+  margin: 0;
 }
