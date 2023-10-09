@@ -1,0 +1,29 @@
+.background {
+  z-index: -1;
+  position: relative;
+}
+
+.background::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background: var(--image-shadow);
+  z-index: 1;
+}
+
+#images {
+  position: absolute;
+  transition: 0.8s all;
+}
+
+#images img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  /* make the image don't distorce into different resolutions */
+  object-fit: cover;
+  object-position: top;
+}
