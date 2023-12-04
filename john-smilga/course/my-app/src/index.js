@@ -1,33 +1,31 @@
-import React from 'react'
+import React, { Children } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css'
 
-const firstBook = {
-  author: 'Liz Cheney',
-  title: 'Oath and Honor: A Memoir and a Warning',
-  img: '../images/book-1.jpg',
-}
+const books = [
+  {
+    author: 'Liz Cheney',
+    title: 'Oath and Honor: A Memoir and a Warning',
+    img: '../images/book-1.jpg',
+    id: 1,
+  },
 
-const secondBook = {
-  author: 'Rebecca Yarros',
-  title: 'Fourth Wing (The Empyrean, 1)',
-  img: 'https://m.media-amazon.com/images/I/51j8bRH5sDL._SY445_SX342_.jpg',
-}
+  {
+    author: 'Rebecca Yarros',
+    title: 'Fourth Wing (The Empyrean, 1)',
+    img: 'https://m.media-amazon.com/images/I/51j8bRH5sDL._SY445_SX342_.jpg',
+    id: 2,
+  },
+]
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      />
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
+      {books.map((el) => {
+        console.log(el, { ...el })
+        return <Book {...el} key={el.id} />
+      })}
     </section>
   )
 }
