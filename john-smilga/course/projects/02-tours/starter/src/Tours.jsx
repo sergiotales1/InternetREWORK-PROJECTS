@@ -3,11 +3,17 @@ import { Tour } from './Tour';
 
 export const Tours = ({ tours, removeTour }) => {
   return (
-    <main>
-      <h1 className="title">Our Tours</h1>
-      {tours.map((tour) => {
-        return <Tour {...tour} key={tour.id} removeTour={removeTour} />;
-      })}
-    </main>
+    <section>
+      <div className="title">
+        <h2>our tours</h2>
+        <div className="title-underline"></div>
+      </div>
+
+      <div className="tours">
+        {tours.map((tour) => {
+          return <Tour {...tour} key={tour.id} removeTour={removeTour} />;
+        })}
+      </div>
+    </section>
   );
 };
