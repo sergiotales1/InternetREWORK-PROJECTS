@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
-const SingleQuestion = ({ info, title }) => {
-  const [textOpen, setTextOpen] = useState(false);
+const SingleQuestion = ({ info, title, id, filterActiveId, activeId }) => {
   return (
-    <div className="single-question">
-      <h1>{title}</h1>
-      {textOpen && <p>{info}</p>}
-      <button type="button" onClick={() => setTextOpen(!textOpen)}>
-        {textOpen ? <AiOutlineMinus /> : <AiOutlinePlus />}
-      </button>
+    <div className={`single-question`}>
+      <div className="title-button">
+        <h1>{title}</h1>
+        <button
+          type="button"
+          onClick={() => {
+            filterActiveId(id);
+          }}
+        >
+          {activeId === id ? <AiOutlineMinus /> : <AiOutlinePlus />}
+        </button>
+      </div>
+      {activeId === id && <p>{info}</p>}
     </div>
   );
 };
